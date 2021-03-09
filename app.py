@@ -7,7 +7,7 @@ def index():
     return """
     <html>
         <body>
-           he <form action = "/print"  method = "post">
+            <form action = "/print"  method = "post">
                 <p>Please Enter your Name</p>
                 Name: <input type = "text" name = "user_name">
                 <input type = "submit" value = "Send">
@@ -17,7 +17,7 @@ def index():
     """
 
 @app.route('/print', methods=['POST'])
-def print():
+def result():
     name = request.form.get('user_name')
     html = """ <html><body><p>Your name is """
     html += name
